@@ -30,8 +30,7 @@ jobs:
         env:
           STRAPI_URL: ${{ vars.STRAPI_URL }}
           STRAPI_MEDIA_URL: ${{ vars.STRAPI_MEDIA_URL }}
-
-      
+          #extra comment
 
         # with:
           # path: . # The root location of your Astro project inside the repository. (optional)
