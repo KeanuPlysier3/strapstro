@@ -123,13 +123,17 @@ const { product } = Astro.props;
   transition:name={`product-${product.documentId}`}
 >
   <Image
-    src={import.meta.env.STRAPI_URL + product.image.url}
+    src={`${import.meta.env.STRAPI_MEDIA_URL}${product.image.url}`}
     alt="Product image"
     inferSize
     layout="constrained"
     format={"avif"}
     widths={[256, 640, 828, 1080, 1190]}
     sizes="(min-width: 2960px) calc(12.5vw - 118px), (min-width: 2600px) calc(14.12vw - 116px), (min-width: 2240px) calc(16.47vw - 119px), (min-width: 1900px) calc(20vw - 128px), (min-width: 1540px) calc(24.71vw - 128px), (min-width: 1140px) calc(30vw - 92px), (min-width: 760px) calc(45vw - 86px), (min-width: 400px) calc(90vw - 70px), calc(27.5vw + 168px)"
+  />
+  <Image
+    src={import.meta.env.STRAPI_URL + product.image.url}
+    alt="Product image"
   />
   <h3>
     {product.title}
