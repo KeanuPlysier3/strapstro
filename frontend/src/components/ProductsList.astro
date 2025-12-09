@@ -31,7 +31,7 @@ const { products } = Astro.props;
   {
     products.map((product) => (
       <li data-category={product.category?.slug}>
-        <a href={`/products/${product.documentId}`}>
+        <a href={`/strapstro/products/${product.documentId}`}>
           <ProductCard product={product} />
         </a>
       </li>
